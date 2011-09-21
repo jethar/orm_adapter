@@ -22,7 +22,7 @@ Provides a single point of entry for popular ruby ORMs.  Its target audience is 
 
 == Supported ORMs
 
-Currently supported ORMs are *ActiveRecord*, *DataMapper*, *Couchrest_Model*, *MongoMapper*, and *MongoId*. The work for couchDB has been included from shenoudab's orm_adapter fork.
+Currently supported ORMs are *ActiveRecord*, *DataMapper*, *Couchrest_Model*, *MongoMapper*, and *MongoId*. The work for couchDB has been included from {shenoudab's orm_adapter fork}[http://github.com/shenoudab/orm_adapter]
 
 We welcome you to write new adapters as gems. ORM Adapter will stay focused in having these major ORMs working.
 
