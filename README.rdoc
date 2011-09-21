@@ -7,22 +7,22 @@ Provides a single point of entry for popular ruby ORMs.  Its target audience is 
 
   require 'orm_adapter'
 
-  User # is it an ActiveRecord, DM Resource, MongoMapper or MongoId Document?
-  
+  User # is it an ActiveRecord, DM Resource, CouchDB, MongoMapper or MongoId Document?
+
   User.to_adapter.find_first :name => 'Fred' # we don't care!
-  
+
   user_model = User.to_adapter
   user_model.get!(1)                      # find a record by id
   user_model.find_first(:name => 'fred')  # find first fred
   user_model.find_all(:name => 'fred')    # find all freds
   user_model.find_all(:order => :name)    # find all freds, ordered by name
-  user_model.create!(:name => 'fred')     # create a fred 
+  user_model.create!(:name => 'fred')     # create a fred
 
 @see OrmAdapter::Base for more details of the supported API
-  
+
 == Supported ORMs
 
-Currently supported ORMs are *ActiveRecord*, *DataMapper*, *MongoMapper*, and *MongoId*.
+Currently supported ORMs are *ActiveRecord*, *DataMapper*, *Couchrest_Model*, *MongoMapper*, and *MongoId*. The work for couchDB has been included from shenoudab's orm_adapter fork.
 
 We welcome you to write new adapters as gems. ORM Adapter will stay focused in having these major ORMs working.
 
@@ -69,3 +69,4 @@ To run the specs, you can start from the last known good set of gem dependencies
 == Copyright
 
 Copyright (c) 2010-2011 Ian White and José Valim. See LICENSE for details.
+

@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency "yard", ">= 0.6.0"
   s.add_development_dependency "rake", ">= 0.8.7"
   s.add_development_dependency "activerecord", ">= 3.0.0"
+  s.add_development_dependency "couchrest_model", ">= 1.1.0"
   s.add_development_dependency "mongoid", ">= 2.0.0.beta.20"
   s.add_development_dependency "mongo_mapper", ">= 0.9.0"
   s.add_development_dependency "bson_ext", ">= 1.3.0"
