@@ -10,7 +10,11 @@ module CouchRest
           doc.destroy
         end
       end
-    
+
+      def update_attribute(key, value)
+        update_attributes( key => value)
+      end
+
       class OrmAdapter < ::OrmAdapter::Base
         # Do not consider these to be part of the class list
         def self.except_classes
@@ -43,7 +47,7 @@ module CouchRest
             klass.send("by_#{conditions.keys.first}", {:key => conditions.values.first, :limit => 1}).first
           end
         end
-        
+
         # Find all models matching conditions
         def find_all(conditions)
           if conditions.keys.first == :id
@@ -57,7 +61,7 @@ module CouchRest
         def create!(attributes)
           klass.create!(attributes)
         end
-  
+
         protected
 
         # converts and documents to ids
